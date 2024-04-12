@@ -74,22 +74,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1600458243448884039}
         m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: ReadMoveDirection
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c7ee3f61-8bb4-4511-b20c-0775ec157ffe
-    m_ActionName: Default/Move[/XInputControllerWindows/leftStick/x,/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1600458243448884039}
-        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
         m_MethodName: ReadJumpAction
         m_Mode: 0
         m_Arguments:
@@ -122,22 +106,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1600458243448884039}
         m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: ReadDownAction
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: f0c21b95-8192-47ac-84c2-5a7f93d4a7b8
-    m_ActionName: Default/Down[/Keyboard/s,/XInputControllerWindows/leftStick/down]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1600458243448884039}
-        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
         m_MethodName: ReadDrawDebugAction
         m_Mode: 0
         m_Arguments:
@@ -150,6 +118,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c13de23c-140d-4ae4-98c8-3155af89cd0c
     m_ActionName: Default/DebugDraw[/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1600458243448884039}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: ReadMoveDirection
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c072bfcd-b05c-4149-9308-e3743b80c4ea
+    m_ActionName: Default/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Default
