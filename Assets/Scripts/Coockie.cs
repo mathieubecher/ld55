@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,15 +9,25 @@ public class Coockie : MonoBehaviour
 {
     [SerializeField] private bool m_isOnMouse;
     [SerializeField] private Collider2D m_collider;
-    
-    
+
+    private void OnEnable()
+    {
+        GameAction.OnMouseClick += OnMouseClick;
+    }
+
+    private void OnDisable()
+    {
+        GameAction.OnMouseClick -= OnMouseClick;
+    }
+
     void Update()
-    {   
-        if (Mouse.current is Mouse mouse)
-        {
-            Vector2 pos = Camera.main.ScreenToWorldPoint(mouse.position.value);
-            Debug.DrawLine(pos, pos + Vector2.up, Color.red);
-            m_isOnMouse = m_collider.OverlapPoint(pos);
-        }
+    {
+        Vector2 pos = GameAction.instance.mousePosition;
+        m_isOnMouse = m_collider.OverlapPoint(pos);
+    }
+
+    private void OnMouseClick()
+    {
+        GameManager.instance.ClickCoockie(1);
     }
 }

@@ -34,9 +34,9 @@ public class GameManager : MonoBehaviour
         m_blood = 0;
     }
     
-    public void ClickCoockie()
+    public void ClickCoockie(int _value)
     {
-        ++score;
+        score += _value;
         m_scoreUI.text = "Score : " + score;
     }
 }
