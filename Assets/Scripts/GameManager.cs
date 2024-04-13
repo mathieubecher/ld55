@@ -19,24 +19,14 @@ public class GameManager : MonoBehaviour
             return m_instance;
         }
     }
-#endregion
-    
-    [SerializeField] private TextMeshProUGUI m_scoreUI;
-    private int m_blood = 0;
-    public int score
-    {
-        get => m_blood;
-        set => m_blood = value;
-    }
 
-    private void Awake()
-    {
-        m_blood = 0;
-    }
-    
-    public void ClickCoockie(int _value)
-    {
-        score += _value;
-        m_scoreUI.text = "Score : " + score;
-    }
+    [SerializeField] private LevelManager m_currentLevel;
+
+    public static LevelManager level => instance.m_currentLevel;
+    public static WorldManager world => instance.m_currentLevel.world;
+    public static BloodBagManager bag => instance.m_currentLevel.bag;
+    public static SummoningManager summoning => instance.m_currentLevel.summoning;
+
+    #endregion
+
 }

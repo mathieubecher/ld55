@@ -10,12 +10,18 @@ using UnityEngine.InputSystem.LowLevel;
 public class KeyboardReader : MonoBehaviour
 {
     private string m_ButtonPressed = "";
-    [SerializeField] private TextMeshProUGUI m_sayUI;
     
-    void Start()
+    public delegate void KeyEvent(string _name);
+    public static event KeyEvent OnKeyPressed;
+    
+    void OnEnable()
     {
-        
         InputSystem.onEvent += InputSystem_onEvent;
+    }
+    
+    void OnDisable()
+    {
+        InputSystem.onEvent -= InputSystem_onEvent;
     }
 
     private void InputSystem_onEvent(InputEventPtr eventPtr, InputDevice device)
@@ -31,20 +37,9 @@ public class KeyboardReader : MonoBehaviour
                 continue;
             if (control.ReadValueFromEvent(eventPtr, out var value) && value >= buttonPressPoint)
             {
-                m_ButtonPressed = control.name;
+                OnKeyPressed?.Invoke(control.name);
                 break;
             }
         }
     }
-    
-    private void Update()
-    {
-        if(m_ButtonPressed.Length > 0)
-        {
-            int length = m_sayUI.text.Length;
-            m_sayUI.text = m_sayUI.text.Remove(0, length - math.min(length, 4)) + m_ButtonPressed;
-            m_ButtonPressed = "";
-        }
-    }
-
 }
