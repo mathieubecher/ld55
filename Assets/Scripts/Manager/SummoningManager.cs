@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class SummoningManager : MonoBehaviour
 {
-    [SerializeField] private SpellData m_defaultSpell;
     [SerializeField] private Image m_spellIcon;
     [SerializeField] private TextMeshProUGUI m_sayUI;
     [SerializeField] private Transform m_progressBar;
@@ -14,11 +13,6 @@ public class SummoningManager : MonoBehaviour
     private int m_runesSayed = 0;
 
     public float progress => m_currentSpell && m_currentSpell.numberOfRunes > 0 ? m_runesSayed / (float)m_currentSpell.numberOfRunes : 0.0f;
-    
-    private void Start()
-    {
-        StartSpell(m_defaultSpell);
-    }
     void OnEnable()
     {
         KeyboardReader.OnKeyPressed += KeyPressed;
