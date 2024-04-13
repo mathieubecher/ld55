@@ -6,6 +6,7 @@ using UnityEngine;
 public class SpellData : ScriptableObject
 {
     public string name;
+    public int cost;
     public Sprite icon;
     public int numberOfRunes;
 

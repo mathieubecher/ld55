@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DefaultSummoning
   m_EditorClassIdentifier: 
   name: Default
+  cost: 20
   icon: {fileID: 21300000, guid: cd1d41e3c37bbb84eb28b5db07689cc1, type: 3}
   numberOfRunes: 500
   creature: {fileID: 11400000, guid: cf94e6144cb918f4f8ac2696e9f69c9e, type: 2}

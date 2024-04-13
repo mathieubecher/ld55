@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   name: Default
-  icon: {fileID: 21300000, guid: cd1d41e3c37bbb84eb28b5db07689cc1, type: 3}
+  cost: 0
+  icon: {fileID: 21300000, guid: c8a298da3d365ef41a568f34d07d767b, type: 3}
   numberOfRunes: 500
