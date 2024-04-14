@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 862715fc67261444bace7c6ffa6b414e
+guid: f59fef0090419f3429582d18a68b7870
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -175,13 +175,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: runes_0
+      name: Chicken_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 40
-        width: 10
-        height: 10
+        y: 0
+        width: 18
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d700bb0dc4750a24daf93b871685a61e
-      internalID: -1249497619
+      spriteID: 7689f39b2aefc75448fc2446ab2c6216
+      internalID: -270857609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runes_1
+      name: Chicken_1
       rect:
         serializedVersion: 2
-        x: 10
-        y: 40
-        width: 10
-        height: 10
+        x: 18
+        y: 0
+        width: 18
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cfc20c156bb9ff4c9761fc3dab5ea3f
-      internalID: -1544339151
+      spriteID: 7ad4dfadc2e673f43a18bf87c5502a80
+      internalID: 1461255284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runes_2
+      name: Chicken_2
       rect:
         serializedVersion: 2
-        x: 20
-        y: 40
-        width: 10
-        height: 10
+        x: 36
+        y: 0
+        width: 18
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d8b54c4c9d581b45ad1b4e61e535f28
-      internalID: 2053445464
+      spriteID: 7a10eb493cfb53842ad674212bec0c1e
+      internalID: 561848960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runes_3
+      name: Chicken_3
       rect:
         serializedVersion: 2
-        x: 30
-        y: 40
-        width: 10
-        height: 10
+        x: 54
+        y: 0
+        width: 18
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bdc0a53658515546a1d1fc1de496412
-      internalID: -2135009135
+      spriteID: 619b1ddd0b648c449ab15aab90234755
+      internalID: 1406936058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runes_4
+      name: Chicken_4
       rect:
         serializedVersion: 2
-        x: 40
-        y: 40
-        width: 10
-        height: 10
+        x: 72
+        y: 0
+        width: 18
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,155 +273,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4e70948e5361a042908905f850b1cbb
-      internalID: -842087618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runes_5
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 40
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31b902d841b07a74fb7f24df66b97954
-      internalID: -448653634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runes_6
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 40
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6936a6753d27cba4381a829439df026e
-      internalID: 1399224945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runes_7
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 40
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d833b3d89bc904429a75212e4371564
-      internalID: 1138083944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runes_8
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 40
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44479bc5dc50729479b99dc123292ab5
-      internalID: -1590592520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runes_9
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 40
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1738a3e970d5c94481df6012ea6752b
-      internalID: 1611381974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runes_10
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 40
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0165f46680e59ae419f62cec2b32743c
-      internalID: 988292199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runes_11
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 40
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06ca2f6d2601f0e4f873a3f40596c88f
-      internalID: -1607454783
+      spriteID: 55cdf2d579b38f64bb411579bc6621ca
+      internalID: 735543546
       vertices: []
       indices: 
       edges: []
@@ -437,18 +290,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      runes_0: -1249497619
-      runes_1: -1544339151
-      runes_10: 988292199
-      runes_11: -1607454783
-      runes_2: 2053445464
-      runes_3: -2135009135
-      runes_4: -842087618
-      runes_5: -448653634
-      runes_6: 1399224945
-      runes_7: 1138083944
-      runes_8: -1590592520
-      runes_9: 1611381974
+      Chicken_0: -270857609
+      Chicken_1: 1461255284
+      Chicken_2: 561848960
+      Chicken_3: 1406936058
+      Chicken_4: 735543546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

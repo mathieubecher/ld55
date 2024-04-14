@@ -28,7 +28,7 @@ public class PortalManager : MonoBehaviour
         {
             m_lastChicken = 0;
             var instance = Instantiate(m_chickenPrefab, transform.position, Quaternion.identity);
-            instance.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0f, 0f, Random.Range(-45f, 0f)) * Vector2.left * Random.Range(5f, 15f);
+            instance.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0f, 0f, Random.Range(-45f, 0f)) * Vector2.left * Random.Range(6f, 15f);
         }
     }
 }

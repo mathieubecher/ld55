@@ -51,7 +51,7 @@ public class BloodBagManager : MonoBehaviour
 
     private void UpdateSize()
     {
-        float currentSize = math.remap(0f, m_maxQuantity, 4f, 10f, m_currentQuantity);
+        float currentSize = math.remap(0f, m_maxQuantity, 5f, 10f, m_currentQuantity);
         transform.localScale = new Vector3(currentSize,currentSize,currentSize);
     }
 
