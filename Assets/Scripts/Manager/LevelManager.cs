@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private BloodBagManager m_currentBag;
     [SerializeField] private SummoningManager m_summoning;
     [SerializeField] private Modifiers m_mofidifiers;
+    [SerializeField] private int m_tickPerSecond = 10;
     private int m_currentTick;
     
     public int currentTick => m_currentTick;
@@ -47,8 +49,7 @@ public class LevelManager : MonoBehaviour
     {
         m_frameTick += Time.fixedDeltaTime;
         
-        float tickTime = 1f;
-        if (m_frameTick >= tickTime)
+        if (m_frameTick >= 1/(float)m_tickPerSecond)
         {
             ++m_currentTick;
             OnTick?.Invoke();
@@ -62,11 +63,12 @@ public class LevelManager : MonoBehaviour
         m_scoreUI.text = "Score : " + bloodScore;
     }
     
-    public bool TrySpell(SpellData _spell)
+    public bool TrySpell(SpellData _spell, float _multiplier)
     {
-        if (bloodScore >= _spell.cost)
+        int cost = (int)math.ceil(_spell.cost * _multiplier);
+        if (bloodScore >= cost)
         {
-            bloodScore -= _spell.cost;
+            bloodScore -= cost;
             m_scoreUI.text = "Score : " + bloodScore;
             return true;
         }

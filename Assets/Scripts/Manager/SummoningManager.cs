@@ -10,6 +10,7 @@ public class SummoningManager : MonoBehaviour
 {
     [SerializeField] private Image m_spellIcon;
     [SerializeField] private ParticleSystem m_say;
+    [SerializeField] private ParticleSystem m_summonersSay;
     [SerializeField] private Transform m_progressBar;
     [SerializeField] private List<Summoner> m_summoners;
     [SerializeField] private GameObject m_summonerPrefab;
@@ -54,6 +55,7 @@ public class SummoningManager : MonoBehaviour
     {
         if (!m_currentSpell) return;
         ++m_runesSayed;
+        m_summonersSay.Emit(1);
         UpdateProgressBar();
         if (m_currentSpell && m_runesSayed >= m_currentSpell.numberOfRunes)
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class Spell : MonoBehaviour
     [SerializeField] private Image m_icon;
     [SerializeField] private TextMeshProUGUI m_name;
     [SerializeField] private TextMeshProUGUI m_cost;
+
+    private int m_number = 0;
 
     private SpellData m_data;
 
@@ -22,6 +25,12 @@ public class Spell : MonoBehaviour
 
     public void Select()
     {
-        if(GameManager.level.TrySpell(m_data)) GameManager.summoning.AddSpellInStack(m_data);
+        if(GameManager.level.TrySpell(m_data, math.pow(1.2f, m_number)))
+        {
+            GameManager.summoning.AddSpellInStack(m_data);
+            ++m_number;
+            int cost = (int)math.ceil(m_data.cost * math.pow(1.2f, m_number));
+            m_cost.text = cost + " blood, " + m_data.numberOfRunes + " runes";
+        }
     }
 }

@@ -16,7 +16,7 @@ public class Modifier : MonoBehaviour
 
     public void Select()
     {
-        if(GameManager.level.TrySpell(m_data))
+        if(GameManager.level.TrySpell(m_data, 1.0f))
         {
             GameManager.summoning.AddSpellInStack(m_data);
             Destroy(gameObject);
