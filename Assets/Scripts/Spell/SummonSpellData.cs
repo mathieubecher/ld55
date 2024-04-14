@@ -14,10 +14,12 @@ public class SummonSpellData : SpellData
     
     public override string Info()
     {
-        return "owned : " + 0;
+        return "owned : " + GameManager.world.NumberOfCreature(creature);
     }
     public override string Description()
     {
-        return "";
+        int number = GameManager.world.NumberOfCreature(creature);
+        return "Each " + creature.name + " generating " + creature.chaos + " chaos per second. \n" +
+               number + " " + creature.name + "collecting " + creature.chaos * number + " chaos per second.";
     }
 }

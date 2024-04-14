@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private SummoningManager m_summoning;
     [SerializeField] private Modifiers m_mofidifiers;
     [SerializeField] private int m_tickPerSecond = 10;
+
+    public int tickPerSecond => m_tickPerSecond;
     private int m_currentTick;
     
     public int currentTick => m_currentTick;
@@ -29,7 +31,7 @@ public class LevelManager : MonoBehaviour
         set
         {
             m_bloodScore = value;
-            m_scoreUI.text = "Score : " + bloodScore;
+            m_scoreUI.text = "Blood collected : " + bloodScore;
         }
     }
 
@@ -60,7 +62,7 @@ public class LevelManager : MonoBehaviour
     public void ClickCoockie(int _value)
     {
         bloodScore += _value;
-        m_scoreUI.text = "Score : " + bloodScore;
+        m_scoreUI.text = "Blood collected : " + bloodScore;
     }
     
     public bool TrySpell(SpellData _spell, float _multiplier)
@@ -69,7 +71,7 @@ public class LevelManager : MonoBehaviour
         if (bloodScore >= cost)
         {
             bloodScore -= cost;
-            m_scoreUI.text = "Score : " + bloodScore;
+            m_scoreUI.text = "Blood collected : 0" + bloodScore;
             return true;
         }
 

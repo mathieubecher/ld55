@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
@@ -10,6 +11,7 @@ using UnityEngine.UI;
 public class BloodBagManager : MonoBehaviour
 {
     [SerializeField] private float m_currentQuantity;
+    [SerializeField] private TextMeshProUGUI m_bagUI;
     
     [SerializeField] private Transform m_center;
     [SerializeField] private List<Sword> m_swords;
@@ -56,6 +58,7 @@ public class BloodBagManager : MonoBehaviour
     {
         float currentSize = math.remap(0f, m_maxQuantity, 5f, 10f, m_currentQuantity);
         transform.localScale = new Vector3(currentSize,currentSize,currentSize);
+        m_bagUI.text = "Blood in heart : " + (int)math.floor(m_currentQuantity) + " / " + (int)math.floor(m_maxQuantity);
     }
 
     void Update()

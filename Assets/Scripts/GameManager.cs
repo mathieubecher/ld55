@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     {
         if (m_descriptionDescription)
         {
-            m_description.position = new Vector3(m_description.position.x, GameAction.instance.mousePosition.y, m_description.position.z);
+            m_description.position = new Vector3(m_description.position.x, GameAction.instance.mousePosition.y + 2.0f, m_description.position.z);
         }
     }
     
