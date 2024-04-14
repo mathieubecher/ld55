@@ -22,6 +22,6 @@ public class Spell : MonoBehaviour
 
     public void Select()
     {
-        if(GameManager.level.TrySpell(m_data)) GameManager.summoning.StartSpell(m_data);
+        if(GameManager.level.TrySpell(m_data)) GameManager.summoning.AddSpellInStack(m_data);
     }
 }

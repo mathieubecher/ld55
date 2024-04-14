@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +14,19 @@ public class SummoningManager : MonoBehaviour
     [SerializeField] private List<Summoner> m_summoners;
     [SerializeField] private GameObject m_summonerPrefab;
 
+    private List<SpellData> m_spellsStack;
+
     private SpellData m_currentSpell;
     private int m_runesSayed = 0;
     public float circleSize => 10;
     public Vector2 circleCenter => transform.position + Vector3.up * 0.5f;
 
     public float progress => m_currentSpell && m_currentSpell.numberOfRunes > 0 ? m_runesSayed / (float)m_currentSpell.numberOfRunes : 0.0f;
+
+    void Awake()
+    {
+        m_spellsStack = new List<SpellData>();
+    }
     void OnEnable()
     {
         KeyboardReader.OnKeyPressed += KeyPressed;
@@ -58,6 +67,11 @@ public class SummoningManager : MonoBehaviour
         m_progressBar.localScale = new Vector3(progress, 1f, 1f);
     }
 
+    public void AddSpellInStack(SpellData _spell)
+    {
+        if(m_currentSpell) m_spellsStack.Add(_spell);
+        else StartSpell(_spell);
+    }
     public void StartSpell(SpellData _spell)
     {
         m_currentSpell = _spell;
@@ -75,6 +89,12 @@ public class SummoningManager : MonoBehaviour
         m_spellIcon.sprite = null;
         m_runesSayed = 0;
         UpdateProgressBar();
+
+        if (m_spellsStack.Count > 0)
+        {
+            StartSpell(m_spellsStack.First());
+            m_spellsStack.RemoveAt(0);
+        }
     }
     
     public void AddSummoner()
