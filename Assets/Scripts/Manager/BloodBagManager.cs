@@ -92,7 +92,7 @@ public class BloodBagManager : MonoBehaviour
     {
         var instance = Instantiate(m_swordPrefab);
         Sword sword = instance.GetComponent<Sword>();
-        m_swords.Add(sword);
         sword.Init(m_swords.Count);
+        m_swords.Add(sword);
     }
 }

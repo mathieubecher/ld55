@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private LevelManager m_currentLevel;
 
-    public static LevelManager level => instance.m_currentLevel;
-    public static WorldManager world => instance.m_currentLevel.world;
-    public static BloodBagManager bag => instance.m_currentLevel.bag;
-    public static SummoningManager summoning => instance.m_currentLevel.summoning;
+    public static LevelManager level => instance? instance.m_currentLevel : null;
+    public static WorldManager world => instance? instance.m_currentLevel.world : null;
+    public static BloodBagManager bag => instance? instance.m_currentLevel.bag : null;
+    public static SummoningManager summoning => instance? instance.m_currentLevel.summoning : null;
 
     #endregion
 

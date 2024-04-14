@@ -434,6 +434,7 @@ MonoBehaviour:
   m_sayUI: {fileID: 8953926305594114800}
   m_progressBar: {fileID: 2804678448367243395}
   m_summoners: []
+  m_summonerPrefab: {fileID: 7865914849262117640, guid: 1876ac1a1941dbd4daa6117c599e8bc3, type: 3}
 --- !u!212 &5161548410857752955
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -472,8 +473,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 21121633
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -723,8 +724,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6247989256728355621}
   - component: {fileID: 5769845696340785969}
+  - component: {fileID: 7819910519712255299}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,6 +799,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7819910519712255299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960573553771487597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1013a79d08c00940a511ed56b6fed06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_chickenPrefab: {fileID: 6747986785807922830, guid: 1db48fbaf4d1f34498516a9c60dcd6df, type: 3}
+  m_cooldown: 50
 --- !u!1 &5731195496866719249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,8 +1501,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 21121633
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}

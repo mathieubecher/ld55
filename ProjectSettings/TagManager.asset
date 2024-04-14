@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Chicken
   - 
   - 
   - 
@@ -43,6 +43,12 @@ TagManager:
     locked: 0
   - name: Bag
     uniqueID: 1915348117
+    locked: 0
+  - name: Summoner
+    uniqueID: 4250985399
+    locked: 0
+  - name: Portal
+    uniqueID: 21121633
     locked: 0
   - name: Chicken
     uniqueID: 2303725559
