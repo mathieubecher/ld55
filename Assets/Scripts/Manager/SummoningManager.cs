@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class SummoningManager : MonoBehaviour
 {
     [SerializeField] private Image m_spellIcon;
-    [SerializeField] private TextMeshProUGUI m_sayUI;
+    [SerializeField] private ParticleSystem m_say;
     [SerializeField] private Transform m_progressBar;
     [SerializeField] private List<Summoner> m_summoners;
     [SerializeField] private GameObject m_summonerPrefab;
@@ -40,9 +40,7 @@ public class SummoningManager : MonoBehaviour
     private void KeyPressed(string _keyName)
     {
         if (!m_currentSpell) return;
-        
-        int length = m_sayUI.text.Length;
-        m_sayUI.text = m_sayUI.text.Remove(0, length - math.min(length, 4)) + _keyName;
+        m_say.Emit(1);
         
         ++m_runesSayed;
         UpdateProgressBar();
