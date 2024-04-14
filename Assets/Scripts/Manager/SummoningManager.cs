@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class SummoningManager : MonoBehaviour
     [SerializeField] private Image m_spellIcon;
     [SerializeField] private TextMeshProUGUI m_sayUI;
     [SerializeField] private Transform m_progressBar;
+    [SerializeField] private List<Summoner> m_summoners;
 
     private SpellData m_currentSpell;
     private int m_runesSayed = 0;

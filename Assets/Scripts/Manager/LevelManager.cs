@@ -10,6 +10,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private BloodBagManager m_currentBag;
     [SerializeField] private SummoningManager m_summoning;
     [SerializeField] private Modifiers m_mofidifiers;
+    private int m_currentTick;
+    
+    public int currentTick => m_currentTick;
     
     public WorldManager world => m_currentWorld;
     public BloodBagManager bag => m_currentBag;
@@ -47,6 +50,7 @@ public class LevelManager : MonoBehaviour
         float tickTime = 1f;
         if (m_frameTick >= tickTime)
         {
+            ++m_currentTick;
             OnTick?.Invoke();
             m_frameTick = 0f;
         }
