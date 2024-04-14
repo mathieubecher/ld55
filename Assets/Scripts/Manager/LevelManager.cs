@@ -9,13 +9,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private WorldManager m_currentWorld;
     [SerializeField] private BloodBagManager m_currentBag;
     [SerializeField] private SummoningManager m_summoning;
+    [SerializeField] private Modifiers m_mofidifiers;
     
     public WorldManager world => m_currentWorld;
     public BloodBagManager bag => m_currentBag;
     public SummoningManager summoning => m_summoning;
+    public Modifiers modifiers => m_mofidifiers;
     
     [SerializeField] private TextMeshProUGUI m_scoreUI;
-
+    
     public int bloodScore
     {
         get => m_bloodScore;

@@ -227,29 +227,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3788461395074957981, guid: 05f0295375de85d4f8a55f75ca62c816, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3788461395074957981, guid: 05f0295375de85d4f8a55f75ca62c816, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3788461395074957981, guid: 05f0295375de85d4f8a55f75ca62c816, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3788461395074957981, guid: 05f0295375de85d4f8a55f75ca62c816, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3788461395074957981, guid: 05f0295375de85d4f8a55f75ca62c816, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3788461395074957981, guid: 05f0295375de85d4f8a55f75ca62c816, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+    - target: {fileID: 4044238637191885343, guid: 05f0295375de85d4f8a55f75ca62c816, type: 3}
+      propertyPath: m_mofidifiers
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5130277858252463707, guid: 05f0295375de85d4f8a55f75ca62c816, type: 3}
       propertyPath: m_LocalPosition.x
