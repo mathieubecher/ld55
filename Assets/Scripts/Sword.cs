@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
+    [SerializeField] private int m_castCoolDown = 10;
     private int m_number;
     private float m_distanceOffset = 0.8f;
     private int m_swordInARow = 18;
@@ -27,7 +28,7 @@ public class Sword : MonoBehaviour
     
     private void Tick()
     {
-        if((GameManager.level.currentTick - m_number) % 10 == 0)
+        if((GameManager.level.currentTick - m_number) % m_castCoolDown == 0)
             GameManager.bag.SwordClick();
     }
 

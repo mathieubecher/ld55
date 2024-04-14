@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Summoner : MonoBehaviour
 {
+    [SerializeField] private int m_castCoolDown = 5;
     private int m_number;
     private int m_maxInARow = 8;
     private float m_rowSpace = 0.8f;
@@ -34,7 +35,7 @@ public class Summoner : MonoBehaviour
     
     private void Tick()
     {
-        if((GameManager.level.currentTick - m_number) % 10 == 0)
+        if((GameManager.level.currentTick - m_number) % m_castCoolDown == 0)
             GameManager.summoning.SummonerKeyPressed();
     }
 
