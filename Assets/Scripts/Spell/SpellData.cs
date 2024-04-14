@@ -14,4 +14,13 @@ public class SpellData : ScriptableObject
     {
         
     }
+
+    public virtual string Info()
+    {
+        return "";
+    }
+    public virtual string Description()
+    {
+        return "";
+    }
 }

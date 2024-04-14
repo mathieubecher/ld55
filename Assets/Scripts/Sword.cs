@@ -7,6 +7,7 @@ public class Sword : MonoBehaviour
 {
     [SerializeField] private int m_castCoolDown = 10;
     [SerializeField] private ParticleSystem m_hit;
+    private Animator m_animator;
     private int m_number;
     private float m_distanceOffset = 0.8f;
     private int m_swordInARow = 18;
@@ -20,6 +21,11 @@ public class Sword : MonoBehaviour
     {
         if(GameManager.level) GameManager.level.OnTick -= Tick;
     }
+
+    private void Awake()
+    {
+        m_animator = GetComponent<Animator>();
+    }
     
     public void Init(int _number)
     {
@@ -32,6 +38,7 @@ public class Sword : MonoBehaviour
         if((GameManager.level.currentTick - m_number) % m_castCoolDown == 0)
         {
             m_hit.Emit(1);
+            m_animator.SetTrigger("Hit");
             GameManager.bag.SwordClick();
         }
     }

@@ -22,4 +22,14 @@ public class Modifier : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    public void OnPointerEnter()
+    {
+        GameManager.instance.DrawDescription(m_data, GameManager.DescriptionType.MODIFIER);
+    }
+
+    public void OnPointerExit()
+    {
+        GameManager.instance.HideDescription(m_data);
+    }
 }

@@ -13,33 +13,12 @@ public class KeyboardReader : MonoBehaviour
     
     public delegate void KeyEvent(string _name);
     public static event KeyEvent OnKeyPressed;
-    
-    void OnEnable()
-    {
-        InputSystem.onEvent += InputSystem_onEvent;
-    }
-    
-    void OnDisable()
-    {
-        InputSystem.onEvent -= InputSystem_onEvent;
-    }
 
-    private void InputSystem_onEvent(InputEventPtr eventPtr, InputDevice device)
+    void Update()
     {
-        if (!device.description.deviceClass.Equals("Keyboard") || !eventPtr.IsA<StateEvent>() && !eventPtr.IsA<DeltaStateEvent>())
-            return;
-        var controls = device.allControls;
-        var buttonPressPoint = InputSystem.settings.defaultButtonPressPoint;
-        for (var i = 0; i < controls.Count; ++i)
+        foreach (var key in Keyboard.current.allKeys)
         {
-            var control = controls[i] as ButtonControl;
-            if (control == null || control.synthetic || control.noisy)
-                continue;
-            if (control.ReadValueFromEvent(eventPtr, out var value) && value >= buttonPressPoint)
-            {
-                OnKeyPressed?.Invoke(control.name);
-                break;
-            }
+            if(key.wasPressedThisFrame) OnKeyPressed?.Invoke("");
         }
     }
 }

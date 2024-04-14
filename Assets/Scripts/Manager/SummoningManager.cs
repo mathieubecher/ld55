@@ -8,14 +8,26 @@ using UnityEngine.UI;
 
 public class SummoningManager : MonoBehaviour
 {
+    private struct Stack
+    {
+        public int number;
+        public SpellData spell;
+
+        public Stack(SpellData _spell)
+        {
+            spell = _spell;
+            number = 1;
+        }
+    }
     [SerializeField] private Image m_spellIcon;
     [SerializeField] private ParticleSystem m_say;
     [SerializeField] private ParticleSystem m_summonersSay;
     [SerializeField] private Transform m_progressBar;
+    [SerializeField] private TextMeshProUGUI m_progressText;
     [SerializeField] private List<Summoner> m_summoners;
     [SerializeField] private GameObject m_summonerPrefab;
 
-    private List<SpellData> m_spellsStack;
+    private List<Stack> m_spellsStack;
 
     private SpellData m_currentSpell;
     private int m_runesSayed = 0;
@@ -26,7 +38,9 @@ public class SummoningManager : MonoBehaviour
 
     void Awake()
     {
-        m_spellsStack = new List<SpellData>();
+        m_spellsStack = new List<Stack>();
+        m_stackUI = new List<SpellStackUI>();
+        UpdateProgressBar();
     }
     void OnEnable()
     {
@@ -65,11 +79,34 @@ public class SummoningManager : MonoBehaviour
     private void UpdateProgressBar()
     {
         m_progressBar.localScale = new Vector3(progress, 1f, 1f);
+        if(!m_currentSpell) m_progressText.gameObject.SetActive(false);
+        else
+        {
+            m_progressText.gameObject.SetActive(true);
+            int value = (int) math.floor(progress * 100.0f);
+            m_progressText.text = (value >= 10 ? "" : "0") + value + "%";
+        } 
     }
 
     public void AddSpellInStack(SpellData _spell)
     {
-        if(m_currentSpell) m_spellsStack.Add(_spell);
+        if (m_currentSpell)
+        {
+            if (m_spellsStack.Count > 0 && m_spellsStack[^1].spell == _spell)
+            {
+                var spell =m_spellsStack[^1];
+                ++spell.number;
+                m_spellsStack[^1] = spell;
+                
+                spell =m_spellsStack[^1];
+            }
+            else
+            {
+                Stack spell = new Stack(_spell);
+                m_spellsStack.Add(spell);
+            }
+            UpdateStackUI();
+        }
         else StartSpell(_spell);
     }
     public void StartSpell(SpellData _spell)
@@ -92,11 +129,15 @@ public class SummoningManager : MonoBehaviour
 
         if (m_spellsStack.Count > 0)
         {
-            StartSpell(m_spellsStack.First());
-            m_spellsStack.RemoveAt(0);
+            StartSpell(m_spellsStack.First().spell);
+            var spell =m_spellsStack[0];
+            --spell.number;
+            m_spellsStack[0] = spell;
+            if(spell.number <= 0) m_spellsStack.RemoveAt(0);
+            UpdateStackUI();
         }
     }
-    
+
     public void AddSummoner()
     {
         var instance = Instantiate(m_summonerPrefab);
@@ -104,4 +145,28 @@ public class SummoningManager : MonoBehaviour
         summoner.Init(m_summoners.Count);
         m_summoners.Add(summoner);
     }
+
+    [Header("SpellStack UI")]
+    [SerializeField] private GameObject m_spellStackUIPrefab;
+    [SerializeField] private Transform m_spellStackUIParent;
+    private List<SpellStackUI> m_stackUI;
+    private void UpdateStackUI()
+    {
+        foreach (var spell in m_stackUI)
+        {
+            Destroy(spell.gameObject);
+        }
+
+        m_stackUI = new List<SpellStackUI>();
+        foreach (var spell in m_spellsStack)
+        {
+            var instance = Instantiate(m_spellStackUIPrefab, m_spellStackUIParent);
+            var spellUI = instance.GetComponent<SpellStackUI>();
+            spellUI.data = spell.spell;
+            spellUI.number.text = spell.number.ToString();
+            spellUI.icon.sprite = spell.spell.icon;
+            m_stackUI.Add(spellUI);
+        }
+    }
+
 }

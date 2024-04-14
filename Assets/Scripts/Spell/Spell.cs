@@ -33,4 +33,14 @@ public class Spell : MonoBehaviour
             m_cost.text = cost + " blood, " + m_data.numberOfRunes + " runes";
         }
     }
+
+    public void OnPointerEnter()
+    {
+        GameManager.instance.DrawDescription(m_data, GameManager.DescriptionType.SUMMON);
+    }
+
+    public void OnPointerExit()
+    {
+        GameManager.instance.HideDescription(m_data);
+    }
 }

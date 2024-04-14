@@ -20,6 +20,8 @@ public class BloodBagManager : MonoBehaviour
 
     [SerializeField] private bool m_isOnMouse;
     [SerializeField] private Collider2D m_collider;
+    private Animator m_animator;
+    public int swordNumber => m_swords.Count;
 
     public float bagSize => transform.localScale.x;
     public Vector2 bagCenter => m_center.position;
@@ -40,6 +42,7 @@ public class BloodBagManager : MonoBehaviour
     {
         m_currentQuantity = m_startQuantity;
         UpdateSize();
+        m_animator = GetComponent<Animator>();
     }
 
     private void Tick()
@@ -71,6 +74,7 @@ public class BloodBagManager : MonoBehaviour
             {
                 GameManager.level.ClickCoockie(realCollectValue);
                 m_currentQuantity -= 1;
+                m_animator.SetTrigger("Hit");
                 UpdateSize();
             }
         }
