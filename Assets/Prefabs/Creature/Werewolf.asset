@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 578657b17a962094f9698f55756d25ad, type: 3}
-  m_Name: Sword
+  m_Script: {fileID: 11500000, guid: 758cb664d86304d4181d158dd743ed5e, type: 3}
+  m_Name: Werewolf
   m_EditorClassIdentifier: 
-  name: Sword
-  cost: 15
-  icon: {fileID: 2061143803, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
-  numberOfRunes: 100
+  name: Werewolf
+  avatar: {fileID: 0}
+  life: 100
+  chaos: 10

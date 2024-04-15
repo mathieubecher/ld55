@@ -6,7 +6,8 @@ public class ModifierListUI : MonoBehaviour
 {
     [SerializeField] private List<ModifierSpell> m_modifiers;
     [SerializeField] private GameObject m_modifierUIPrefab;
-    
+
+    private int m_modifierNumber = 0;
     void Awake()
     {
         for (int i = transform.childCount - 1; i >= 0; --i)
@@ -14,10 +15,24 @@ public class ModifierListUI : MonoBehaviour
             Destroy(transform.GetChild(i));
         }
 
-        foreach (var modifierSpell in m_modifiers)
+        m_modifiers.Sort((x, y) => x.cost.CompareTo(y.cost));
+        for (int i = 0; i < m_modifiers.Count && i < 8; ++i)
         {
+            var modifierSpell = m_modifiers[i];
             var instance = Instantiate(m_modifierUIPrefab, transform);
-            instance.GetComponent<Modifier>().Init(modifierSpell);
+            instance.GetComponent<Modifier>().Init(modifierSpell, this);
+            ++m_modifierNumber;
+        }
+    }
+
+    public void DrawNewModifier()
+    {
+        if (m_modifierNumber < m_modifiers.Count)
+        {
+            var modifierSpell = m_modifiers[m_modifierNumber];
+            var instance = Instantiate(m_modifierUIPrefab, transform);
+            instance.GetComponent<Modifier>().Init(modifierSpell, this);
+            ++m_modifierNumber;
         }
     }
 }

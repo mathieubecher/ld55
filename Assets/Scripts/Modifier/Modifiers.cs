@@ -9,7 +9,7 @@ public class Modifiers : MonoBehaviour
     public float GetModifierValue(string _name)
     {
         var modifier = modifiers.Find(x => x.name == _name);
-        return modifier?.value ?? 0.0f;
+        return modifier?.value ?? 1.0f;
     }
     private void Start()
     {
@@ -26,7 +26,7 @@ public class Modifiers : MonoBehaviour
         var currModifier = modifiers.Find(x => x.name == modifierData.name);
         if (currModifier != null)
         {
-            currModifier.value += modifierData.value;
+            currModifier.value *= modifierData.value;
         }
         else modifiers.Add(new ModifierData(modifierData));
     }

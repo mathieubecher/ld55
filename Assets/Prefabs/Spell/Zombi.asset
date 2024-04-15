@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 578657b17a962094f9698f55756d25ad, type: 3}
-  m_Name: Sword
+  m_Script: {fileID: 11500000, guid: a40768b3fabf4464b9138969cdbdd478, type: 3}
+  m_Name: Zombi
   m_EditorClassIdentifier: 
-  name: Sword
-  cost: 15
-  icon: {fileID: 2061143803, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
+  name: Zombi
+  cost: 30
+  icon: {fileID: 1755794632, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
   numberOfRunes: 100
+  creature: {fileID: 11400000, guid: cf94e6144cb918f4f8ac2696e9f69c9e, type: 2}
