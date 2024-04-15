@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class WorldManager : MonoBehaviour
 {
-    private List<Creature> m_creaturesInWorld;
     [SerializeField] private TextMeshProUGUI m_chaosUI;
     [SerializeField] private GameObject m_creaturePrefab;
     private Dictionary<CreatureData, int> m_creatures;
@@ -19,9 +18,9 @@ public class WorldManager : MonoBehaviour
         get
         {
             float chaos = m_defaultLevelOfChaos;
-            foreach (var creature in m_creaturesInWorld)
+            foreach (var creature in m_creatures)
             {
-                chaos += creature.chaos;
+                chaos += creature.Key.chaos * GameManager.level.modifiers.GetModifierValue(creature.Key.name+"Chaos") * creature.Value;
             }
             return chaos;
         }
@@ -31,7 +30,6 @@ public class WorldManager : MonoBehaviour
     
     void Awake()
     {
-        m_creaturesInWorld = new List<Creature>();
         m_creatures = new Dictionary<CreatureData, int>(); 
     }
 
@@ -42,13 +40,7 @@ public class WorldManager : MonoBehaviour
 
     public void AddCreature(CreatureData _creature)
     {
-        var instance = Instantiate(m_creaturePrefab, transform.parent);
-        var creature = instance.GetComponent<Creature>();
-        creature.Init(_creature);
-
         if (!m_creatures.ContainsKey(_creature)) m_creatures[_creature] = 0;
         ++m_creatures[_creature];
-        
-        m_creaturesInWorld.Add(creature);
     }
 }

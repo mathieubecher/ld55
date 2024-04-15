@@ -19,7 +19,8 @@ public class SummonSpellData : SpellData
     public override string Description()
     {
         int number = GameManager.world.NumberOfCreature(creature);
-        return "Each " + creature.name + " generating " + creature.chaos + " chaos per second. \n" +
-               number + " " + creature.name + "collecting " + creature.chaos * number + " chaos per second.";
+        float chaos = creature.chaos * GameManager.level.modifiers.GetModifierValue(creature.name+"Chaos");
+        return "Each " + creature.name + " generating " + chaos + " chaos per second. \n" +
+               number + " " + creature.name + "collecting " + chaos * number + " chaos per second.";
     }
 }

@@ -68,7 +68,7 @@ public class SummoningManager : MonoBehaviour
     public void SummonerKeyPressed()
     {
         if (!m_currentSpell) return;
-        ++m_runesSayed;
+        m_runesSayed += (int)math.floor(GameManager.level.modifiers.GetModifierValue("ChickenSpeech"));
         m_summonersSay.Emit(1);
         UpdateProgressBar();
         if (m_currentSpell && m_runesSayed >= m_currentSpell.numberOfRunes)
