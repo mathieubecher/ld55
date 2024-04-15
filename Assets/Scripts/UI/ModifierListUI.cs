@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class ModifierListUI : MonoBehaviour
@@ -35,4 +36,19 @@ public class ModifierListUI : MonoBehaviour
             ++m_modifierNumber;
         }
     }
+
+    #if UNITY_EDITOR
+    [ContextMenu("GetAllModifier")]
+    public void GetAllModifier()
+    {
+        m_modifiers = new List<ModifierSpell>();
+        var guids = AssetDatabase.FindAssets("t:"+ nameof(ModifierSpell));
+        for(int i = 0; i < guids.Length; i++)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guids[i]);
+            m_modifiers.Add(AssetDatabase.LoadAssetAtPath<ModifierSpell>(path));
+        }
+        m_modifiers.Sort((x, y) => x.cost.CompareTo(y.cost));
+    }
+    #endif
 }

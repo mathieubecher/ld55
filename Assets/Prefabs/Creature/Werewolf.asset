@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Werewolf
   avatar: {fileID: 0}
-  life: 100
-  chaos: 10
+  life: 50
+  chaos: 50

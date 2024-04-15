@@ -18,8 +18,10 @@ public class SwordSpell : SpellData
     
     public override string Description()
     {
+        int number = GameManager.bag.swordNumber;
+        float bps = GameManager.level.tickPerSecond / (float)GameManager.level.swordCooldown * GameManager.level.modifiers.GetModifierValue("SwordCollect");
         return "A sword that regularly attacks the heart to collect blood. \n" +
-               "Each sword collecting " + 0.2f + " blood per second. \n" +
-               GameManager.bag.swordNumber + "swords collecting " + 0.2f * GameManager.bag.swordNumber + " blood per second.";
+               "Each sword collecting " + bps + " blood per second. \n" +
+               number + " swords collecting " + bps * number + " blood per second.";
     }
 }

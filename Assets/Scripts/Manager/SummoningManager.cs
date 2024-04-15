@@ -57,7 +57,7 @@ public class SummoningManager : MonoBehaviour
         if (!m_currentSpell) return;
         m_say.Emit(1);
         
-        ++m_runesSayed;
+        m_runesSayed += 1;
         UpdateProgressBar();
         if (m_currentSpell && m_runesSayed >= m_currentSpell.numberOfRunes)
         {

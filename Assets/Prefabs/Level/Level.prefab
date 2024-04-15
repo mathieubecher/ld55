@@ -186,41 +186,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_modifiers:
-  - {fileID: 11400000, guid: 01b852463d0753a4baeee6613dcfb707, type: 2}
-  - {fileID: 11400000, guid: 60094af731ea03748aac2603148dfd47, type: 2}
-  - {fileID: 11400000, guid: cd06b6ef90e46ab4593dfed0203f28c8, type: 2}
-  - {fileID: 11400000, guid: 01b852463d0753a4baeee6613dcfb707, type: 2}
-  - {fileID: 11400000, guid: 60094af731ea03748aac2603148dfd47, type: 2}
-  - {fileID: 11400000, guid: cd06b6ef90e46ab4593dfed0203f28c8, type: 2}
-  - {fileID: 11400000, guid: ddce36e5277da9b4c858036ba2a9ab04, type: 2}
-  - {fileID: 11400000, guid: b52ac0018fd2e8b4ea1fc390bc0b19bd, type: 2}
-  - {fileID: 11400000, guid: 4137dcd1dbf826449a340eac6cc46f60, type: 2}
-  - {fileID: 11400000, guid: 8c8e0d7ee3cd32b4286076bda284b241, type: 2}
-  - {fileID: 11400000, guid: 8531f0503a26949479d37318e474f401, type: 2}
   - {fileID: 11400000, guid: 4292a445b37761c4f9dd75dcfa19cb05, type: 2}
-  - {fileID: 11400000, guid: 91fc27971b5930245b97e459a6c6efab, type: 2}
-  - {fileID: 11400000, guid: 91fc27971b5930245b97e459a6c6efab, type: 2}
-  - {fileID: 11400000, guid: 83b0fecb056f4ce41afddb321fcfe5c7, type: 2}
-  - {fileID: 11400000, guid: 38bf88b54bdb9614b9c0b51f75936676, type: 2}
-  - {fileID: 11400000, guid: e42d904c089a02d40bc4b8fdaa77a631, type: 2}
-  - {fileID: 11400000, guid: c559f529895ca9b4993367bf9b4f270c, type: 2}
-  - {fileID: 11400000, guid: 79bf6f9c7e14af44e984baa25f482883, type: 2}
-  - {fileID: 11400000, guid: 756ebe2d29b9fbc48beb8e1ef89a1927, type: 2}
+  - {fileID: 11400000, guid: 01b852463d0753a4baeee6613dcfb707, type: 2}
   - {fileID: 11400000, guid: 3ede55641d696e040b1c4a8c56c3a106, type: 2}
+  - {fileID: 11400000, guid: 4137dcd1dbf826449a340eac6cc46f60, type: 2}
+  - {fileID: 11400000, guid: 38bf88b54bdb9614b9c0b51f75936676, type: 2}
+  - {fileID: 11400000, guid: 9bfdccfb5ef6f6344a183558d35404a6, type: 2}
+  - {fileID: 11400000, guid: 29e666b0a187faf45aef204218d1b753, type: 2}
   - {fileID: 11400000, guid: 1d273c3a2df462f4aa03a11c9643bebe, type: 2}
-  - {fileID: 11400000, guid: 03d419fd4d8719c4a9f081a31ba68b26, type: 2}
-  - {fileID: 11400000, guid: 0578ba1e36dee6f4a879c087d5a6ec4c, type: 2}
+  - {fileID: 11400000, guid: 91fc27971b5930245b97e459a6c6efab, type: 2}
+  - {fileID: 11400000, guid: 326196302084cd346baf5be485563402, type: 2}
+  - {fileID: 11400000, guid: 60094af731ea03748aac2603148dfd47, type: 2}
+  - {fileID: 11400000, guid: cd06b6ef90e46ab4593dfed0203f28c8, type: 2}
+  - {fileID: 11400000, guid: e42d904c089a02d40bc4b8fdaa77a631, type: 2}
   - {fileID: 11400000, guid: b647b938d45b8a2488b74b4f8c90cff3, type: 2}
-  - {fileID: 11400000, guid: f56096e0177fcfc429cf0576253b4ff2, type: 2}
-  - {fileID: 11400000, guid: bfd76786bdf662b45bf2b75393f90f75, type: 2}
-  - {fileID: 11400000, guid: f64d47a862d256446ab2331daf608e26, type: 2}
+  - {fileID: 11400000, guid: 8531f0503a26949479d37318e474f401, type: 2}
+  - {fileID: 11400000, guid: 83b0fecb056f4ce41afddb321fcfe5c7, type: 2}
   - {fileID: 11400000, guid: 50f150cbf7a1f654387601fc9ee7b3c8, type: 2}
+  - {fileID: 11400000, guid: f56096e0177fcfc429cf0576253b4ff2, type: 2}
+  - {fileID: 11400000, guid: ddce36e5277da9b4c858036ba2a9ab04, type: 2}
+  - {fileID: 11400000, guid: 03d419fd4d8719c4a9f081a31ba68b26, type: 2}
+  - {fileID: 11400000, guid: 8c8e0d7ee3cd32b4286076bda284b241, type: 2}
   - {fileID: 11400000, guid: 96321a269b9272e43b38f3468b8cf412, type: 2}
-  - {fileID: 11400000, guid: 5fa82e2291baf774e99b7b5c5fe9b784, type: 2}
-  - {fileID: 11400000, guid: 5efca4505be14954e83a200535fc5dfd, type: 2}
+  - {fileID: 11400000, guid: c559f529895ca9b4993367bf9b4f270c, type: 2}
+  - {fileID: 11400000, guid: 45fc5a79c219ad74bb5974916d6605f3, type: 2}
+  - {fileID: 11400000, guid: 0578ba1e36dee6f4a879c087d5a6ec4c, type: 2}
+  - {fileID: 11400000, guid: b52ac0018fd2e8b4ea1fc390bc0b19bd, type: 2}
+  - {fileID: 11400000, guid: bfd76786bdf662b45bf2b75393f90f75, type: 2}
+  - {fileID: 11400000, guid: dd69ffaa607eec54cb663df3d42b267a, type: 2}
   - {fileID: 11400000, guid: 133964854368c784fa54f5cad6e366fc, type: 2}
+  - {fileID: 11400000, guid: 7aa30f195656ae64dbc65075028ff13f, type: 2}
+  - {fileID: 11400000, guid: 79bf6f9c7e14af44e984baa25f482883, type: 2}
+  - {fileID: 11400000, guid: 5fa82e2291baf774e99b7b5c5fe9b784, type: 2}
+  - {fileID: 11400000, guid: ffcaaf3591ad4db4b8a4a9dbc02e2eb0, type: 2}
+  - {fileID: 11400000, guid: 8f1ab3ec466333b4cb6e1e54101cc1a7, type: 2}
+  - {fileID: 11400000, guid: f64d47a862d256446ab2331daf608e26, type: 2}
+  - {fileID: 11400000, guid: 0a4242a3b9d8a9e4e8c8a214e79e9c74, type: 2}
+  - {fileID: 11400000, guid: 5efca4505be14954e83a200535fc5dfd, type: 2}
   - {fileID: 11400000, guid: a24ed3d3012cb3e4bb03f953c24d675a, type: 2}
+  - {fileID: 11400000, guid: 756ebe2d29b9fbc48beb8e1ef89a1927, type: 2}
   - {fileID: 11400000, guid: 2513c6907ad2ff34389380ad659fb6ce, type: 2}
+  - {fileID: 11400000, guid: cc2a0181d7528934eac042e1802a86eb, type: 2}
   - {fileID: 11400000, guid: bc1a008d4f75216428772ebd54b784e6, type: 2}
   m_modifierUIPrefab: {fileID: 5589406638596879517, guid: 5742c71f40bbadd4c91eefcd052b8a01, type: 3}
 --- !u!222 &1987686675089863606
@@ -457,7 +463,7 @@ GameObject:
   - component: {fileID: 5419449989936370605}
   - component: {fileID: 6462680139987956919}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Store
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2294,7 +2300,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 111.400055, y: -21.400013}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 464.16, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &7796158107309680628
 CanvasRenderer:
@@ -2351,8 +2357,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2954,6 +2960,8 @@ MonoBehaviour:
   m_summoning: {fileID: 1133954667900479862}
   m_mofidifiers: {fileID: 2762633084044342139}
   m_tickPerSecond: 10
+  m_swordCooldown: 10
+  m_chickenCooldown: 10
   m_scoreUI: {fileID: 1490624755440192384}
 --- !u!114 &8811456315632561948
 MonoBehaviour:

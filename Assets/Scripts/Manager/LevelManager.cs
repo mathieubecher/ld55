@@ -12,9 +12,13 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private SummoningManager m_summoning;
     [SerializeField] private Modifiers m_mofidifiers;
     [SerializeField] private int m_tickPerSecond = 10;
+    [SerializeField] private int m_swordCooldown = 50;
+    [SerializeField] private int m_chickenCooldown = 10;
+    private int m_currentTick;
 
     public int tickPerSecond => m_tickPerSecond;
-    private int m_currentTick;
+    public int swordCooldown => m_swordCooldown;
+    public int chickenCooldown => m_chickenCooldown;
     
     public int currentTick => m_currentTick;
     
@@ -71,7 +75,7 @@ public class LevelManager : MonoBehaviour
         if (bloodScore >= cost)
         {
             bloodScore -= cost;
-            m_scoreUI.text = "Blood collected : 0" + bloodScore;
+            m_scoreUI.text = "Blood collected : " + bloodScore;
             return true;
         }
 

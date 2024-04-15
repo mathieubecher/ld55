@@ -15,8 +15,8 @@ MonoBehaviour:
   name: Upgrade Bag
   cost: 50000
   icon: {fileID: -1986427384, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
-  numberOfRunes: 5000
+  numberOfRunes: 2000
   data:
     name: BagCapacity
-    value: 1.2
-  description: Bag can store 20% more blood.
+    value: 2
+  description: Bag can store twice more blood.

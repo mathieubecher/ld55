@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 1SwordEfficiency
   m_EditorClassIdentifier: 
   name: Sword Efficiency
-  cost: 200
+  cost: 100
   icon: {fileID: -1231669846, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
-  numberOfRunes: 500
+  numberOfRunes: 200
   data:
     name: SwordCollect
     value: 2

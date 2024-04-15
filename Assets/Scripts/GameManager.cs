@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_descriptionRunes;
     [SerializeField] private TextMeshProUGUI m_descriptionDescription;
     private SpellData m_currentDataDescription;
-    public void DrawDescription(SpellData _data, DescriptionType _type)
+    public void DrawDescription(SpellData _data, int _cost, DescriptionType _type)
     {
         m_currentDataDescription = _data;
         m_description.gameObject.SetActive(true);
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         m_descriptionIcon.sprite = _data.icon;
         m_descriptionTitle.text = _data.name;
         m_descriptionInfo.text = _data.Info();
-        m_descriptionCost.text = _data.cost + " Blood";
+        m_descriptionCost.text = _cost + " Blood";
         m_descriptionRunes.text = _data.numberOfRunes + " Runes";
         m_descriptionDescription.text = _data.Description();
     }

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cd017e9763d80a4bb479c832ad3f6fc, type: 3}
-  m_Name: 2BagUpgrade
+  m_Name: 7BagUpgrade
   m_EditorClassIdentifier: 
   name: Upgrade Bag
-  cost: 500
+  cost: 200000
   icon: {fileID: -1986427384, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
-  numberOfRunes: 300
+  numberOfRunes: 8000
   data:
     name: BagCapacity
-    value: 2
-  description: Bag can store twice more blood.
+    value: 5
+  description: Bag can store five more blood.

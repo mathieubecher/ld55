@@ -36,7 +36,7 @@ public class Spell : MonoBehaviour
 
     public void OnPointerEnter()
     {
-        GameManager.instance.DrawDescription(m_data, GameManager.DescriptionType.SUMMON);
+        GameManager.instance.DrawDescription(m_data, (int)math.ceil(m_data.cost * math.pow(1.2f, m_number)), GameManager.DescriptionType.SUMMON);
     }
 
     public void OnPointerExit()

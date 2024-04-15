@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Werewolf
   m_EditorClassIdentifier: 
   name: Werewolf
-  cost: 10000
+  cost: 30000
   icon: {fileID: 699193179, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
   numberOfRunes: 1000
   creature: {fileID: 11400000, guid: 618c34e2719b46645be7794b13140d5b, type: 2}

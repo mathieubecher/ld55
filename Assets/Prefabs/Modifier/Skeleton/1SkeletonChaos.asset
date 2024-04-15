@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1SkeletonChaos
   m_EditorClassIdentifier: 
   name: Limestone
-  cost: 300
+  cost: 2000
   icon: {fileID: -423726029, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
   numberOfRunes: 300
   data:

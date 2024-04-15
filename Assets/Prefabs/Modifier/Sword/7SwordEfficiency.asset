@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cd017e9763d80a4bb479c832ad3f6fc, type: 3}
-  m_Name: UpgradeSummoners
+  m_Name: 7SwordEfficiency
   m_EditorClassIdentifier: 
-  name: Summoner
-  cost: 10
-  icon: {fileID: 21300000, guid: 9381cbbba5bfaa84289bd694e8d2b847, type: 3}
-  numberOfRunes: 500
+  name: Sword Efficiency
+  cost: 100000
+  icon: {fileID: -1231669846, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
+  numberOfRunes: 20000
   data:
-    name: Summoner_speed
+    name: SwordCollect
     value: 2
+  description: Sword collect twice blood each time.

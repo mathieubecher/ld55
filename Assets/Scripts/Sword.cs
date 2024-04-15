@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    [SerializeField] private int m_castCoolDown = 10;
     [SerializeField] private ParticleSystem m_hit;
     private Animator m_animator;
     private int m_number;
@@ -35,7 +34,7 @@ public class Sword : MonoBehaviour
     
     private void Tick()
     {
-        if((GameManager.level.currentTick - m_number) % m_castCoolDown == 0)
+        if((GameManager.level.currentTick - m_number) % GameManager.level.swordCooldown == 0)
         {
             m_hit.Emit(1);
             m_animator.SetTrigger("Hit");

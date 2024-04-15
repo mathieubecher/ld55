@@ -18,5 +18,5 @@ MonoBehaviour:
   numberOfRunes: 500
   data:
     name: BagCapacity
-    value: 1.2
-  description: Bag can store 20% more blood.
+    value: 2
+  description: Bag can store twice more blood.

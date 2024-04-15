@@ -27,7 +27,7 @@ public class Modifier : MonoBehaviour
     
     public void OnPointerEnter()
     {
-        GameManager.instance.DrawDescription(m_data, GameManager.DescriptionType.MODIFIER);
+        GameManager.instance.DrawDescription(m_data, m_data.cost, GameManager.DescriptionType.MODIFIER);
     }
 
     public void OnPointerExit()

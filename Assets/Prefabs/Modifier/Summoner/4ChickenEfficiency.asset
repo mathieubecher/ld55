@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 4ChickenEfficiency
   m_EditorClassIdentifier: 
   name: Chicken Speech
-  cost: 100000
+  cost: 1000
   icon: {fileID: 1592370133, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
-  numberOfRunes: 5000
+  numberOfRunes: 300
   data:
     name: ChickenSpeech
     value: 2

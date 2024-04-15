@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cd017e9763d80a4bb479c832ad3f6fc, type: 3}
-  m_Name: UpgradeClick
+  m_Name: 6BagUpgrade
   m_EditorClassIdentifier: 
-  name: Clicker
-  cost: 10
-  icon: {fileID: 21300000, guid: cd1d41e3c37bbb84eb28b5db07689cc1, type: 3}
-  numberOfRunes: 500
+  name: Upgrade Bag
+  cost: 100000
+  icon: {fileID: -1986427384, guid: bc492fd9797aff54dbd02e06854a27c1, type: 3}
+  numberOfRunes: 5000
   data:
-    name: Clicker_factor
-    value: 2
+    name: BagCapacity
+    value: 3
+  description: Bag can store three more blood.
