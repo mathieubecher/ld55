@@ -17,7 +17,7 @@ public class ModifierListUI : MonoBehaviour
         }
 
         m_modifiers.Sort((x, y) => x.cost.CompareTo(y.cost));
-        for (int i = 0; i < m_modifiers.Count && i < 8; ++i)
+        for (int i = 0; i < m_modifiers.Count && i < 12; ++i)
         {
             var modifierSpell = m_modifiers[i];
             var instance = Instantiate(m_modifierUIPrefab, transform);

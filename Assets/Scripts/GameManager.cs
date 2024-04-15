@@ -51,8 +51,8 @@ public class GameManager : MonoBehaviour
         m_descriptionIcon.sprite = _data.icon;
         m_descriptionTitle.text = _data.name;
         m_descriptionInfo.text = _data.Info();
-        m_descriptionCost.text = _cost + " Blood";
-        m_descriptionRunes.text = _data.numberOfRunes + " Runes";
+        m_descriptionCost.text = _cost.ToString();
+        m_descriptionRunes.text = _data.numberOfRunes.ToString();
         m_descriptionDescription.text = _data.Description();
     }
 

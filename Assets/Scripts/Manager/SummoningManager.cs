@@ -26,11 +26,13 @@ public class SummoningManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_progressText;
     [SerializeField] private List<Summoner> m_summoners;
     [SerializeField] private GameObject m_summonerPrefab;
+    [SerializeField] private Transform m_guide;
 
     private List<Stack> m_spellsStack;
 
     private SpellData m_currentSpell;
     private int m_runesSayed = 0;
+    private int m_castNumber = 0;
     public float circleSize => 10;
     public Vector2 circleCenter => transform.position + Vector3.up * 0.5f;
 
@@ -111,6 +113,8 @@ public class SummoningManager : MonoBehaviour
     }
     public void StartSpell(SpellData _spell)
     {
+        ++m_castNumber;
+        if(m_castNumber == 1) m_guide.gameObject.SetActive(true);
         m_currentSpell = _spell;
         m_runesSayed = 0;
         m_spellIcon.sprite = m_currentSpell.icon;
@@ -119,6 +123,7 @@ public class SummoningManager : MonoBehaviour
 
     public void StopSpell()
     {
+        if(m_castNumber == 1) m_guide.gameObject.SetActive(false);
         if (!m_currentSpell) return;
         
         m_currentSpell.CastingOver();

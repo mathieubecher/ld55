@@ -68,7 +68,12 @@ public class LevelManager : MonoBehaviour
         bloodScore += _value;
         m_scoreUI.text = "Blood collected : " + bloodScore;
     }
-    
+
+    public bool CanSpell(SpellData _spell, float _multiplier)
+    {
+        int cost = (int)math.ceil(_spell.cost * _multiplier);
+        return bloodScore >= cost;
+    }
     public bool TrySpell(SpellData _spell, float _multiplier)
     {
         int cost = (int)math.ceil(_spell.cost * _multiplier);

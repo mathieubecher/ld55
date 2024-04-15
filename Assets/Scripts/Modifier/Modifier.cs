@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine;
@@ -13,6 +14,11 @@ public class Modifier : MonoBehaviour
         m_data = _data;
         m_icon.sprite = m_data.icon;
         m_list = _list;
+    }
+
+    public void FixedUpdate()
+    {
+        m_icon.color = (GameManager.level.CanSpell(m_data, 1.0f))? Color.white : Color.Lerp(Color.white, Color.black, 0.5f);
     }
 
     public void Select()
